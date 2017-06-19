@@ -24,7 +24,7 @@
 %groupedaddress,
 %unsortedaddress,
 %runinaddress,
-%frontmatterverbose, 
+%frontmatterverbose,
 %preprint,
 %showpacs,preprintnumbers,
 %nofootinbib,
@@ -32,6 +32,7 @@
 %bibnotes,
  amsmath,amssymb,
  aps,
+ prd
 %pra,
 %prb,
 %rmp,
@@ -47,13 +48,23 @@
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 
-%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%\usepackage[showframe,%Uncomment any one of the following lines to test
 %%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
 %%text={7in,10in},centering,
 %%margin=1.5in,
 %%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
 %%height=10in,a5paper,hmargin={3cm,0.8in},
 %]{geometry}
+
+\newcommand{\ii}{\mathrm i}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Packages for draft only
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[normalem]{ulem}
+
 
 \begin{document}
 
@@ -87,7 +98,7 @@ ABSTRACT PLACEHOLDER
 % May be entered using the \verb+\pacs{#1}+ command.
 % \item[Structure]
 % You may use the \texttt{description} environment to structure your abstract;
-% use the optional argument of the \verb+\item+ command to give the category of each item. 
+% use the optional argument of the \verb+\item+ command to give the category of each item.
 % \end{description}
 \end{abstract}
 
@@ -104,7 +115,41 @@ ABSTRACT PLACEHOLDER
 \section{\label{sec-introduction}Introduction}
 
 
-Neutrino flavor conversions in vacuum are linear effects in Schrodinger equation. In dense neutrino media, neutrinos demonstrate highly nonlinear flavor transformations due to forward scattering interactions of neutrinos. Recent studies by I. Izaguirre, G. Raffelt, and I. Tamborra show that neutrino flavor conversion instabilities is related to gaps in dispersion relation.\cite{Izaguirre2016a}
+Neutrino flavor conversions in vacuum are linear effects in Schrodinger equation. In dense neutrino media, neutrinos demonstrate highly nonlinear flavor transformations due to forward scattering interactions of neutrinos. Such interactions lead to flavor conversions of different category from vacuum oscillations. The technique used to investigate the nonlinear effect is linear stability analysis.\cite{Banerjee2011a,Raffelt2013} Recent studies by I. Izaguirre, G. Raffelt, and I. Tamborra show that neutrino flavor conversion instabilities is related to gaps in dispersion relation.\cite{Izaguirre2016a} They showed that dispersion relation can be defined and calculated in linear regime of neutrino flavor conversions. In this work we argue that neutrino flavor conversion instabilities are not exactly mapped to gaps in dispersion relation.
+
+
+\section{\label{sec-dr}Dispersion Relation of Neutrino Flavor Conversion}
+
+We consider two-flavor scenario of neutrino oscillations. In principle, neutrino oscillations depend on three different contributions from vacuum oscillations, interactions with matter, and interactions with neutrinos themselves. The concentration of this work is on fast neutrino oscillations, which would occur even without neutrino mass differences. For completeness we keep the vacuum oscillations term in the calculations.
+
+Another ingredient is the spectrum of neutrino distributions. 
+
+which is defined by the equation of motion
+\begin{equation}
+\ii (\partial_t + \mathbf v\cdot \boldsymbol{\nabla}) \rho = \left[ H, \rho \right],
+\end{equation}
+where $\rho$ is the traceless density matrix and $H$ is the Hamiltonian. The density matrix is explicitly defined as
+\begin{equation}
+   \rho = \frac{1}{2} \begin{pmatrix}
+   1 & \epsilon \\
+   \epsilon^* & -1
+\end{pmatrix}.
+\end{equation}
+Hamiltonian is composed of three contributions from vacuum oscillations $H_{\mathrm v}$, interactions with matter $H_{\mathrm m}$, as well as neutrino forward scattering potential $H_{\nu\nu}$. Vacuum oscillations term is defined
+\begin{equation}
+   H_{\mathrm v} = -\frac{\omega_{\mathrm v}}{2} \sigma_3,
+\end{equation}
+where $\omega = \frac{\delta m^2}{2}$ with $\delta m^2$ being the mass squared difference in this two flavor scenario. Interactions with matter is described by matter potential
+\begin{equation}
+   H_{\mathrm m} = \frac{1}{2}\lambda \sigma_3.
+\end{equation}
+where $\lambda = \sqrt{2}G_{\mathrm F} n_\nu$. $G_{\mathrm F}$ is the Fermi constant and $n_\nu$ is the number density of neutrinos. Neutrino forward scattering potential is
+\begin{equation}
+H_{\nu\nu} = .
+\end{equation}
+
+
+
 
 
 \section{\label{sec:outline}Plan of the paper}
@@ -112,13 +157,12 @@ Neutrino flavor conversions in vacuum are linear effects in Schrodinger equation
 
 
 \begin{itemize}
-    \item Review fast mode oscillations
+    \item \sout{Review fast mode oscillations}
     \item State what has been done in Raffelt's paper.
     \item The conclusion is not true.
     \item Two beams examples to prove that the number of solutions is the key.
     \item Show that the continuous case is not related to gap at all. Box spectrum?
-    \item Continuous spectrum/Garching group, data to show that we can prove the location of the instability.
-    
+    \item Continuous spectrum or Garching group, data to show that we can prove the location of the instability.
 \end{itemize}
 
 
@@ -131,7 +175,7 @@ We are still not crystal clear about the relation between gap and lsa.
 
 
 \bibliographystyle{apsrev4-1}
-\bibliography{ref.bib} 
+\bibliography{ref.bib}
 
 \end{document}
 %
