@@ -64,6 +64,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[normalem]{ulem}
+\usepackage{xcolor}
 
 
 \begin{document}
@@ -115,27 +116,26 @@ ABSTRACT PLACEHOLDER
 \section{\label{sec-introduction}Introduction}
 
 
-Neutrino flavor conversions in vacuum are linear effects in Schrodinger equation. In dense neutrino media, neutrinos demonstrate highly nonlinear flavor transformations due to forward scattering interactions of neutrinos. Such interactions lead to flavor conversions of different category from vacuum oscillations. The technique used to investigate the nonlinear effect is linear stability analysis.\cite{Banerjee2011a,Raffelt2013} Recent studies by I. Izaguirre, G. Raffelt, and I. Tamborra show that neutrino flavor conversion instabilities is related to gaps in dispersion relation.\cite{Izaguirre2016a} They showed that dispersion relation can be defined and calculated in linear regime of neutrino flavor conversions. In this work we argue that neutrino flavor conversion instabilities are not exactly mapped to gaps in dispersion relation.
+Neutrino flavor conversions in vacuum are linear effects in Schrodinger equation. In dense neutrino media, neutrinos demonstrate highly nonlinear flavor transformations due to forward scattering interactions of neutrinos. Such interactions lead to flavor conversions of different category from vacuum oscillations. The technique used to investigate the nonlinear effect is linear stability analysis.\cite{Banerjee2011a,Raffelt2013} Recent studies by I. Izaguirre, G. Raffelt, and I. Tamborra show that neutrino flavor conversion instabilities is related to gaps in dispersion relation.\cite{Izaguirre2016a} They showed that dispersion relation can be defined and calculated in linear regime of neutrino flavor conversions. We argue that neutrino flavor conversions instabilities are not exactly mapped to gaps in dispersion relation for continuous angular distributions of neutrino emissions. In Sec. \ref{sec-dr} we review the formalism of linear stability analysis and dispersion relation.
 
 
 \section{\label{sec-dr}Dispersion Relation of Neutrino Flavor Conversion}
 
-We consider two-flavor scenario of neutrino oscillations. In principle, neutrino oscillations depend on three different contributions from vacuum oscillations, interactions with matter, and interactions with neutrinos themselves. The concentration of this work is on fast neutrino oscillations, which would occur even without neutrino mass differences. For completeness we keep the vacuum oscillations term in the calculations.
-
-Another ingredient is the spectrum of neutrino distributions.
-
-which is defined by the equation of motion
-\begin{equation}
-\ii (\partial_t + \mathbf v\cdot \boldsymbol{\nabla}) \rho = \left[ H, \rho \right],
-\end{equation}
-where $\rho$ is the traceless density matrix and $H$ is the Hamiltonian. The density matrix is explicitly defined as
+We consider two-flavor scenario of neutrino oscillations. As an initial condition, all neutrinos and antineutrinos are emitted approximately as electron flavors. For the purpose of linear stability analysis, the single particle density matrix for neutrinos is explicitly defined as
 \begin{equation}
    \rho = \frac{1}{2} \begin{pmatrix}
    1 & \epsilon \\
    \epsilon^* & -1
 \end{pmatrix}.
 \end{equation}
-Hamiltonian is composed of three contributions from vacuum oscillations $H_{\mathrm v}$, interactions with matter $H_{\mathrm m}$, as well as neutrino forward scattering potential $H_{\nu\nu}$. Vacuum oscillations term is defined
+To determine the flavor evolution, Liouville equation of neutrinos is used,
+\begin{equation}
+\ii (\partial_t + \mathbf v\cdot \boldsymbol{\nabla}) \rho = \left[ H, \rho \right],
+\label{eqn-liouville-eqn}
+\end{equation}
+where $H$ is the Hamiltonian for neutrino oscillations. Density matrix and equation of motion for antineutrinos are defined in the same maner with the corresponding Hamiltonian for antineutrinos.
+
+In principle, neutrino oscillations Hamiltonian depend on three different contributions, vacuum oscillations $H_{\mathrm v}$, interactions with matter $H_{\mathrm m}$, and interactions with neutrinos themselves $H_{\nu\nu}$. The concentration of this work is on fast neutrino oscillations, which would occur even without neutrino mass differences. However, the vacuum term can always be combined with matter term by redefining new matter potential. Thus neglecting vacuum term doesn't change the formalism of linear stability analysis. Vacuum oscillations term is defined
 \begin{equation}
    H_{\mathrm v} = -\frac{\omega_{\mathrm v}}{2} \sigma_3,
 \end{equation}
@@ -143,16 +143,116 @@ where $\omega = \frac{\delta m^2}{2}$ with $\delta m^2$ being the mass squared d
 \begin{equation}
    H_{\mathrm m} = \frac{1}{2}\lambda \sigma_3.
 \end{equation}
-where $\lambda = \sqrt{2}G_{\mathrm F} n_\nu$. $G_{\mathrm F}$ is the Fermi constant and $n_\nu$ is the number density of neutrinos. Neutrino forward scattering potential is
+where $\lambda = \sqrt{2}G_{\mathrm F} n_{\mathrm e}$. $G_{\mathrm F}$ is the Fermi constant and $n_{\mathrm e}$ is the number density of electrons in the background. In order to calculate the neutrino forward scattering, the spectrum of neutrino (antineutrinos) distributions $f_{\nu_{\mathrm e}(\bar \nu_{\mathrm e})}(p)$, where $p$ is the four momentum of neutrinos (antineutrinos), is required. Following the definition of electron lepton number $G(\hat{\mathbf v})$ in \onlinecite{Izaguirre2016a}, neutrino forward scattering potential is
 \begin{equation}
-H_{\nu\nu} = .
+H_{\nu\nu} = \sqrt{2} G_{\mathrm F} \iint \frac{\mathrm d \cos\theta' \mathrm d\phi'}{4\pi} G(\cos\theta',\phi') v^\mu v'_\mu \rho,
+\end{equation}
+where $v^\mu = ( 1, \sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta )^{\mathrm T}$ in spherical coordinate system.
+
+Linear stability analysis of Eq. \eqref{eqn-liouville-eqn} for axial symmetric neutrino emission shows that
+\begin{align}
+&\det \left( \omega \mathrm{I} + \frac{1}{2}
+\begin{pmatrix}
+   I_0 & 0 & 0 & -I_1 \\
+   0 & -\frac{1}{2} (I_0 - I_2) & 0 & 0 \\
+   0 & 0 & -\frac{1}{2} (I_0 - I_2) & 0 \\
+   I_1 & 0 & 0 & -I_2
+\end{pmatrix}\right) \nonumber\\
+&=0,
+\label{eqn-det-polarization-tensor}
+\end{align}
+where
+\begin{equation}
+   I_m(\theta)=\int_{\cos\theta_H}^{\cos\theta_L} d\cos\theta G(\theta) \frac{\cos^m\theta}{1 -  \left(\lvert k\rvert /\omega\right) \cos\theta }.
+\end{equation}
+For convinience, we denote $u=\cos\theta$ later on. Two categories of solutions was found, namely the multi-azimuthal angle (MAA) solution and multi-zenith angle (MZA) solution. The MAA solution is only related to instabilities due to azimuthal angle. Its formal solution is
+\begin{equation}
+   \omega = \frac{1}{4}(I_0 - I_2).
+\end{equation}
+The MZA solution is related to both azimuthal angle and zenith angle, which has formal solutions
+\begin{equation}
+\omega = - \frac{1}{4} \left( I_0 - I_2 \pm \sqrt{ (I_0 + I_2 - 2 I_1) (I_0 + I_2 + 2 I_1) } \right).
 \end{equation}
 
 
+Eq. \eqref{eqn-det-polarization-tensor} is equivalent to dispersion relation defined in \onlinecite{Izaguirre2016a}.
+
+%%%%%%%%%%%%%%%%%
+%% To BE Added
+%%%%%%%%%%%%%%%%
+{\color{red}{\bf HAVE TO EXPLAIN THE IDEA OF GAP AND INSTABILITY HERE.}}
 
 
 
-\section{\label{sec:outline}Plan of the paper}
+
+
+
+\section{\label{sec-twobeams}Discrete Zenith Angle Model}
+
+Axially symmetric two emission angles model is determined by the electron lepton number
+\begin{equation}
+G(u)= \sum_{i=1}^2 g_i \delta(u - u_i).
+\end{equation}
+
+The MAA solution is an equation of hypobola for $\omega$ and $k$, which as asymptotic lines $\omega = k u_i$ for $i=1,2$. The hyperbola equation has two solutions for $\omega$ given real $k$ or two solutions for $k$ given real $\omega$. The solutions are either real which indicates stable solutions or complex which indicates exponential growth in linear regime. Thus the equivalence of gap and instabilities is guaranteed.
+
+However, this conclusion can not be generalized to arbitrary number of emission angles. As an example, we calculate the three emission angles configuration.
+
+{\color{red}\bf PLACE THE PLOTS HERE}
+
+
+\section{\label{sec-continuous-spectrum}Continuous Spectrum}
+
+
+
+\begin{equation}
+   4 = \bar I_0 - \bar I_2
+\end{equation}
+
+\begin{equation}
+   4 = \frac{1}{k} \int G(u) \frac{ 1 - u^2 }{ \omega/k - u }
+\end{equation}
+
+\begin{align}
+k_R =& \frac{1}{4}\left(  \mathscr P \int G(u) \frac{ 1 - u^2 }{  - u }  \right) \\
+k_I =&  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right)
+\end{align}
+
+
+\begin{equation}
+   \lvert k_I \rvert  =  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right).
+\end{equation}
+
+
+\section{\label{sec-conclusion}Conclusion}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% APPENDIX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+\section{\label{sec-outline}Plan of the paper}
 
 
 
