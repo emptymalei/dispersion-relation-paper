@@ -71,7 +71,7 @@
 
 %\preprint{APS/123-QED}
 
-\title{Dispersion Relation and Neutrino Flavor Instabilities in Fast Modes}% Force line breaks with \\
+\title{Dispersion Relation Gaps and Neutrino Flavor Instabilities in Fast Modes}% Force line breaks with \\
 \thanks{A footnote to the article title}%
 
 \author{Ann Author}
@@ -116,7 +116,8 @@ ABSTRACT PLACEHOLDER
 \section{\label{sec-introduction}Introduction}
 
 
-Neutrino flavor conversions in vacuum are linear effects in Schrodinger equation. In dense neutrino media, neutrinos demonstrate highly nonlinear flavor transformations due to forward scattering interactions of neutrinos. Such interactions lead to flavor conversions of different category from vacuum oscillations. The technique used to investigate the nonlinear effect is linear stability analysis.\cite{Banerjee2011a,Raffelt2013} Recent studies by I. Izaguirre, G. Raffelt, and I. Tamborra show that neutrino flavor conversion instabilities is related to gaps in dispersion relation.\cite{Izaguirre2016a} They showed that dispersion relation can be defined and calculated in linear regime of neutrino flavor conversions. We argue that neutrino flavor conversions instabilities are not exactly mapped to gaps in dispersion relation for continuous angular distributions of neutrino emissions. In Sec. \ref{sec-dr} we review the formalism of linear stability analysis and dispersion relation.
+Neutrino flavor conversions in vacuum are linear effects in Schrodinger equation, in other words, the vacuum Hamiltonian doesn't depend on the state of neutrino flavors. However, neutrinos propagate in dense neutrino media demonstrate highly nonlinear flavor transformations due to forward scattering interactions of neutrinos. Such interactions lead to flavor conversions instabilities. The technique used to investigate the nonlinear neutrino flavor conversion is linear stability analysis \cite{Banerjee2011a,Raffelt2013}. Recent studies by I. Izaguirre, G. Raffelt, and I. Tamborra show that linear stability analysis indicates the dispersion relation \cite{Izaguirre2016a}. They also showed that dispersion relation can be defined and calculated in linear regime of neutrino flavor conversions. Moreover, they conclued that neutrino flavor conversion instabilities occur within gaps in dispersion relation. We argue that neutrino flavor conversion instabilities is not exactly mapped to gaps in dispersion relation for discrete emission with more than two angles or continuous angular distributions of neutrino emissions. To begin with, we review reference \onlinecite{Izaguirre2016a} to explain the dispersion relation in Sec. \ref{sec-dr}.
+
 
 
 \section{\label{sec-dr}Dispersion Relation of Neutrino Flavor Conversion}
@@ -168,10 +169,12 @@ where
 For convinience, we denote $u=\cos\theta$ later on. Two categories of solutions was found, namely the multi-azimuthal angle (MAA) solution and multi-zenith angle (MZA) solution. The MAA solution is only related to instabilities due to azimuthal angle. Its formal solution is
 \begin{equation}
    \omega = \frac{1}{4}(I_0 - I_2).
+   \label{eqn-maa}
 \end{equation}
 The MZA solution is related to both azimuthal angle and zenith angle, which has formal solutions
 \begin{equation}
 \omega = - \frac{1}{4} \left( I_0 - I_2 \pm \sqrt{ (I_0 + I_2 - 2 I_1) (I_0 + I_2 + 2 I_1) } \right).
+\label{eqn-mza}
 \end{equation}
 
 
@@ -187,23 +190,34 @@ Eq. \eqref{eqn-det-polarization-tensor} is equivalent to dispersion relation def
 
 
 
-\section{\label{sec-twobeams}Discrete Zenith Angle Model}
+\section{\label{sec-DiscreteAgnles}Discrete Zenith Angle Model}
 
-Axially symmetric two emission angles model is determined by the electron lepton number
+For the purpose of illustration, we consider axial symmetric neutrino emissions with discretized zenith angles $\theta$. In this case, the ELN is independent of azimuth angle $\phi$. For neutrino emission with $N$ zenith angles, the ELN spectrum can be written as
 \begin{equation}
-G(u)= \sum_{i=1}^2 g_i \delta(u - u_i).
+G(u)= \sum_{i=1}^N g_i \delta(u - u_i).
 \end{equation}
 
-The MAA solution is an equation of hypobola for $\omega$ and $k$, which as asymptotic lines $\omega = k u_i$ for $i=1,2$. The hyperbola equation has two solutions for $\omega$ given real $k$ or two solutions for $k$ given real $\omega$. The solutions are either real which indicates stable solutions or complex which indicates exponential growth in linear regime. Thus the equivalence of gap and instabilities is guaranteed.
+For two zenith angles $N=2$, the MAA solution becomes an equation of hypobola for $\omega$ and $k$, which has asymptotic lines $\omega = k u_i$ for $i=1,2$. Mathematically speaking, the hyperbola equation has two solutions of $\omega$ ($k$) for any given real $k$ ($\omega$). The solutions are either real which indicates stable solutions or complex which indicates exponential growth in linear regime. On the other hand, non-existance of real solution of $\omega$ ($k$) for given real $k$ ($\omega$) is equivalent to gap in dispersion relation. Thus the equivalence of gap and instabilities is guaranteed in neutrino emission with two-zenith-angle emission.
 
-However, this conclusion can not be generalized to arbitrary number of emission angles. As an example, we calculate the three emission angles configuration.
+However, this conclusion can not be generalized to arbitrary number of emission angles. As an example, we calculate the three-zenith-angle emission configuration.
 
-{\color{red}\bf PLACE THE PLOTS HERE}
+{\color{red}\bf Place the dispersion relation as well as LSA for three zenith angles here}
+
+
+{\color{red}\bf Emphasize here that the number of solutions is the key.}
+
+{\color{red}\bf The forbidden region is determined by the emission angles.}
+
+
 
 
 \section{\label{sec-continuous-spectrum}Continuous Spectrum}
 
+More realistic models of supernova explosions involves continuous zenith angle ELN spectra. In this section we analyze dispersion relation and instabilities for box-shaped spectra and spectra from Garching group.
 
+
+
+\subsection{\label{}Instabilities at $\omega\to 0$}
 
 \begin{equation}
    4 = \bar I_0 - \bar I_2
