@@ -227,17 +227,7 @@ The MAA solution becomes an equation of hypobola for $\omega$ and $k$, which has
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{assets/spectDBWC1DRDBMZAmPlt.pdf}
 \endminipage
-\caption{Dispersion relation and instabilities of two zenith angles spectrum. {\color{red}\bf More about the figures}  }\label{fig-db-wc1}
-\end{figure}
-
-
-However, this conclusion can not be generalized to arbitrary number of emission angles. As an example, we calculate the three zenith angles emission configuration. For three zenith angles, there are three solutions of $k$ ($\omega$) for given real $\omega$ ($k$). As long as real solutions disappear, complex solutions emerge, which leads to instabilities occur even without an actual gap.
-
-
-
-
-
-\begin{figure}[!htb]
+\newline
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{assets/spectDB3WC4DRDBMAAPlt.pdf}
 \endminipage\hfill
@@ -247,29 +237,71 @@ However, this conclusion can not be generalized to arbitrary number of emission 
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{assets/spectDB3WC4DRDBMZAmPlt.pdf}
 \endminipage\hfill
-\caption{Dispersion relation and instabilities of three zenith angles spectrum. {\color{red}\bf I think C4 is a better example. But I do not know a way to plot C4 continuously. I can only show the DR as discrete points. Definitely should choose C4 anyway. Should also place a line for some real omega's or k's to show that the number of solutions should always be 3.}  }\label{fig-db3-wc1}
+\caption{Dispersion relation and instabilities of two zenith angles spectrum (upper panels) and three zenith angles spectrum (lower panels). The black lines are the dispersion relations and the colored dots are examples of complex $\omega$ for real $k$. The left panels shows the dispersion relation and linear stability analysis of MAA solutions. The mid and right panels show the dispersion relation of MZA solutions.}
+\label{fig-dr-db}
 \end{figure}
 
 
+However, this conclusion can not be generalized to arbitrary number of emission angles. As an example, we perform linear stability analysi of the three zenith angles emission configuration which is determined by a cubic function both in $\omega$ and $k$. Thus three solutions of $k$ ($\omega$) for given real $\omega$ ($k$) are epxected. As long as real solutions disappear, complex solutions emerge, which leads to instabilities occur even without an actual gap. As an example, we fix $\omega= 0.5$ for MAA solution (Fig. \ref{fig-dr-db3-wc1} left panel). The three solutions of $k$ are $k=-4.6, 0.29, 1.2$.  $0.2$ which are all real and indicates no spatial instabilities. However, for another real $\omega = 0.2$, we find only one real solution $k=0.4$ from dispersion relation. The other solutions are complex and proven to be $k = -0.557106\pm 0.966535\mathrm i$ where the value with positive imaginary part leads to exponential growth. This gap and instability inconsistancy also exists in continuous angular distribution of neutrino emission.
 
-{\color{red}\bf Emphasize here that the number of solutions is the key.}
 
-{\color{red}\bf The forbidden region is determined by the emission angles.}
 
-{\color{red}\bf I could show the results for C4 since it has both MAA and MZA instabilities.}
+
+
+
+
+
+
+{\color{red}\bf The forbidden region is determined by the emission angles. But is the forbidden region useful here? I don't think so.}
+
+{\color{red}\bf I could show the results for C4 since it has both MAA and MZA instabilities. But we care about complex $k$ the most so I guess WC4 is fine.}
 
 {\color{red}\bf Should I combine the MZA+ and MZA- solutions? }
 
+{\color{red}\bf Font size in the plots are too small. But the font size depends on whether I need to combine MZA+ and MZA- solutions. }
+
+{\color{red}\bf $\omega=0$ lines in the plots should be made distinguishable from the DR. }
+
+
+
 \section{\label{sec-continuous-spectrum}Continuous Spectrum}
 
-More realistic models of supernova explosions involves continuous zenith angle ELN spectra. In this section we analyze dispersion relation and instabilities for box-shaped spectra and spectra from Garching group, both of which are assumed to be axial symmetric.
+More realistic models of supernova explosions involves continuous zenith angle ELN spectra. In this section we analyze dispersion relation and instabilities for box-shaped spectra as well as spectrum from Garching group, both of which are assumed to be axial symmetric.
 
 \subsection{\label{sec-boxspectrum}Box Spectra}
 
-We choose to calculate the dispersion relation and linear stability analysis for a box spectrum for simplicity.
+As the first example of continuous emission, we calculate the dispersion relation and linear stability analysis for a box spectrum.
 
 
-{\color{red}\bf A figure of box spectrum and the corresponding DR+LSA.}
+\begin{figure}
+   \minipage{0.49\textwidth}
+     \includegraphics[width=\linewidth]{assets/spectBoxC1Spectrum.pdf}
+   \endminipage\hfill
+   \minipage{0.49\textwidth}
+   \includegraphics[width=\linewidth]{assets/spectBoxC1MAADRPlt.pdf}
+   \endminipage\hfill
+   \caption{Dispersion relation and linear stability analysis for box spectrum. The box spectrum is $-0.1$ within range $u\in [-1,-0.3)$ and $1$ within range $u\in [-0.3,1]$ as shown in the left panel. The right panel shows that the dispersion relation and the linear stability analysis. Dashed gray lines are lines of $\omega= \pm k$ which sets the boundaries of the forbidden region for dispersion relation.
+    }
+   \label{fig-box-c1}
+\end{figure}
+
+
+\subsection{\label{sec-garching}Garching 1D Simulation Spectrum}
+
+
+\begin{figure}
+   \minipage{0.49\textwidth}
+     \includegraphics[width=\linewidth]{assets/spectGarchingPlt.pdf}
+   \endminipage\hfill
+   \minipage{0.49\textwidth}
+   \includegraphics[width=\linewidth]{assets/spectGarchingDRLSAPlt.pdf}
+   \endminipage\hfill
+   \caption{Dispersion relation and linear stability analysis for a spectrum constructed from Garching 1D simulation data (left panel). From left to right, the sets of colored dots are the complex $k$ for MAA solution, MZA-, and MZA+ solutions respectively.
+    }
+   \label{fig-garching}
+\end{figure}
+
+
 
 
 \subsection{\label{sec-omega-to-zero}Instabilities at $\omega\to 0$}
