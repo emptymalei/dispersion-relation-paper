@@ -188,6 +188,7 @@ The MZA solution is related to symmetry breaking in both azimuthal angle and zen
 \omega = - \frac{1}{4} \left( I_0 - I_2 \pm \sqrt{ (I_0 + I_2 - 2 I_1) (I_0 + I_2 + 2 I_1) } \right).
 \label{eqn-mza}
 \end{equation}
+We denote the solution associated with $+$ sign as MZA+, while the solution assocated with $-$ sign as MZA-. The two solutions are connected to each other in dispersion relations.
 
 Eq. \eqref{eqn-det-polarization-tensor} is equivalent to dispersion relation defined in \onlinecite{Izaguirre2016a}. In other words, the solutions \eqref{eqn-maa} and \eqref{eqn-mza} are dispersion relations $D(\omega,\mathbf k)$ for a chosen direction of $\hat{\mathbf k} = \hat{\mathbf z}$.
 
@@ -204,7 +205,7 @@ Eq. \eqref{eqn-det-polarization-tensor} is equivalent to dispersion relation def
 
 
 
-\section{\label{sec-DiscreteAgnles}Discrete Zenith Angle Model}
+\section{\label{sec-from-instability-to-gap}From Instability to Gap}
 
 In \onlinecite{Izaguirre2016a}, the authors relate gaps to instabilities of neutrino oscillations. The definition of gaps of dispersion relation becomes clear in examples. We repeat the two zenith ranges example discussed in \onlinecite{Izaguirre2016a} as a review.
 
@@ -246,31 +247,11 @@ However, this conclusion can not be generalized to arbitrary number of emission 
 
 
 
+In core collapse supernova, neutrino emission is not in discrete zenith angles. More realistic models involves continuous zenith angle ELN spectra. In the earlier works of fast modes, Sawyer analyzed a box shaped angular distribution of neutrino emission \cite{Sawyer2016}. To address the fact that instability does not always show up in dispersion relation as gap, we show that the relation between instability and gap in dispersion relation can break down for box spectrum with crossing.
 
 
 
-
-
-
-{\color{red}\bf The forbidden region is determined by the emission angles. But is the forbidden region useful here? I don't think so.}
-
-{\color{red}\bf I could show the results for C4 since it has both MAA and MZA instabilities. But we care about complex $k$ the most so I guess WC4 is fine.}
-
-{\color{red}\bf Should I combine the MZA+ and MZA- solutions? }
-
-{\color{red}\bf Font size in the plots are too small. But the font size depends on whether I need to combine MZA+ and MZA- solutions. }
-
-{\color{red}\bf $\omega=0$ lines in the plots should be made distinguishable from the DR. }
-
-
-
-\section{\label{sec-continuous-spectrum}Continuous Spectrum}
-
-More realistic models of supernova explosions involves continuous zenith angle ELN spectra. In the earlier works of fast modes, Sawyer analyzed a box shaped angular distribution of neutrino emission \cite{Sawyer2016}. We show that the relation between instability and gap in dispersion relation breaks down for some box spectrum.
-
-\subsection{\label{sec-boxspectrum}Box Spectra}
-
-We construct a box spectrum with value $-0.1$ within $u\in [-1,-0.3)$ and value $1$ within $[-0.3,1]$ as shown in the top left panel of Fig. \ref{fig-box-c1}. With the spectrum defined, we calculate the dispersion relation and find out complex values of $k$ for real $\omega$.
+We construct a box spectrum with value $-0.1$ within $u\in [-1,-0.3)$ and value $1$ within $[-0.3,1]$ as shown in the top left panel of Fig. \ref{fig-box-c1}. With the spectrum defined, we calculate the dispersion relation and find out complex values of $k$ for real $\omega$. The results show that both the MAA solution and MZA solutioins contain only one curve. No gap is formed but we observe instabilities, which are plotted as colored dots.
 
 
 \begin{figure}
@@ -292,13 +273,27 @@ We construct a box spectrum with value $-0.1$ within $u\in [-1,-0.3)$ and value 
 \end{figure}
 
 
-\subsection{\label{sec-linear-spectrum}Linear Spectrum}
 
 
-To address the fact that instability does not always show up in dispersion relation as gap, we calculate the dispersion relation relation for a linear spectrum with crossing.
 
 
-\subsection{\label{sec-garching}Garching 1D Simulation Spectrum}
+
+{\color{red}\bf The forbidden region is determined by the emission angles. But is the forbidden region worth mentioning here? I don't think so.}
+
+{\color{red}\bf I could show the results for C4 since it has both MAA and MZA instabilities. But we care about complex $k$ the most so I guess WC4 is fine.}
+
+{\color{red}\bf Should I combine the MZA+ and MZA- solutions? }
+
+{\color{red}\bf Font size in the plots are too small. But the font size depends on whether I need to combine MZA+ and MZA- solutions. }
+
+{\color{red}\bf $\omega=0$ lines in the plots should be made distinguishable from the DR. }
+
+
+
+\section{\label{sec-gap-to-instability}From Gap to Instability}
+
+In the situations that the ELN spectrum has no crossing, gap indeed indicates instabilities, as shown in \onlinecite{Izaguirre2016a}. In this section we prove that the instabilities in MAA, MZA+, or MZA- solution can only appear in either region $\omega\leq 0$ or region $\omega \geq 0$. As this suggests, the instability regions propagate only between the dispersion relation and the axis $\omega=0$. We reproduce the calculation in \onlinecite{Izaguirre2016a} using the same Garching core-collapse supernova data set \cite{garching-ccsn-data}. The spectrum shown in the left panel of Fig. \ref{fig-garching} is polynomial fitting of the Garching 1D supernova simulation data.
+
 
 
 
@@ -319,25 +314,39 @@ To address the fact that instability does not always show up in dispersion relat
 
 
 
-\subsection{\label{sec-omega-to-zero}Instabilities at $\omega\to 0$}
+% \subsection{\label{sec-omega-to-zero}Instabilities at $\omega\to 0$}
 
+For MAA solution of arbitrary spectrum, we write down the general form as
 \begin{equation}
-   4 = \bar I_0 - \bar I_2
+   4 = \bar I_0 - \bar I_2,
 \end{equation}
-
+where the $I_m$ is defined in the preceeding sections. Explicitly, we have to solve the integral function to find out $k$ for real $\omega$,
 \begin{equation}
-   4 = \frac{1}{k} \int G(u) \frac{ 1 - u^2 }{ \omega/k - u }
+   k = \frac{1}{4} \int G(u) \frac{ 1 - u^2 }{ \omega/k - u }.
 \end{equation}
-
+For complex $k$, the integral can be decomposed into the principal value $\operatorname{Re}(k)$ and imaginary part $\operatorname{Im}(k)$,
 \begin{align}
-k_R =& \frac{1}{4}\left(  \mathscr P \int G(u) \frac{ 1 - u^2 }{  - u }  \right) \\
-k_I =&  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right)
+\operatorname{Re}(k) =& \frac{1}{4}\left(  \mathcal{P} \int G(u) \frac{ 1 - u^2 }{  - u }  \right)\label{eqn-re-k-arbitrary-spectrum} \\
+\operatorname{Im}(k) =&  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right).
+\label{eqn-im-k-arbitrary-spectrum}
 \end{align}
-
-
+We conclude from Eq. \eqref{eqn-im-k-arbitrary-spectrum} that $\omega$ has to have the same sign as $G(0)$. What's more, the value of $k$ at limit $\omega\to 0$ can be solved out of Eq. \eqref{eqn-re-k-arbitrary-spectrum} and Eq. \eqref{eqn-im-k-arbitrary-spectrum}. For instabilities the imaginary part of $k$ tells us the growth,
 \begin{equation}
-   \lvert k_I \rvert  =  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right).
+   \lvert \operatorname{Im}(k) \rvert  =  \frac{\pi}{4}\lvert G(0)\rvert .
 \end{equation}
+Similar result is obtained for MZA solutions,
+\begin{align}
+&\left(4\operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2  - \left( \operatorname{Sign}(\omega \operatorname{Im}(k) )\pi G(0) +4 \operatorname{Im}(k) \right)^2 \\
+=&\left( \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2 -1 - 4 U_0^2  \\
+&\left( 4 \operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right) \left( \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0) + 4 \operatorname{Im}(k) \right) \\
+=& - \left( \mathcal P \int \frac{G(u)}{u} \mathrm du + U_1 \right) \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0),
+\end{align}
+where $U_m = \int G(u) u^m \mathrm du$ and all the integrals are from $-1$ to $1$. The equations are quadratic in both $\operatorname{Re}(k)$ and $\operatorname{Im}(k)$ so the real solutions can be calculated and verified with linear stability analysis. The imaginary part $\operatorname{Im}(k)$
+\begin{equation}
+   \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega k_I) \left(  1 + \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
+\end{equation}
+determines that the two solutions are either in the region $\omega>0$ or in the region $\omega<0$ which corresponds to MZA+ and MZA- solutions.
+
 
 
 \section{\label{sec-conclusion}Conclusion}
