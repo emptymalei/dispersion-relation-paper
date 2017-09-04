@@ -65,6 +65,7 @@ preprint,
 
 \usepackage[normalem]{ulem}
 \usepackage{xcolor}
+\usepackage{accents}
 
 
 \begin{document}
@@ -117,25 +118,23 @@ ABSTRACT PLACEHOLDER
 
 (Should talk about some very very basic backgrounds like the applications and why it is important.)
 
-Neutrino flavor conversions in vacuum are linear effects in Schrodinger equation, in other words, the vacuum Hamiltonian doesn't depend on the state of neutrino flavors. However, neutrinos propagate in dense neutrino media demonstrate highly nonlinear flavor transformations due to forward scattering interactions of neutrinos. Such interactions lead to flavor conversions instabilities. The technique that is used to investigate the nonlinear neutrino flavor conversion is linear stability analysis \cite{Banerjee2011a,Raffelt2013}. Recent studies by I. Izaguirre, G. Raffelt, and I. Tamborra show that linear stability analysis indicates the dispersion relation \cite{Izaguirre2016a}. They also showed that dispersion relation can be defined and calculated in linear regime of neutrino flavor conversions. Moreover, they conclued that neutrino flavor conversion instabilities occur within gaps in dispersion relation. We argue that neutrino flavor conversion instabilities is not exactly mapped to gaps in dispersion relation for discrete emission with more than two angles or continuous angular distributions of neutrino emissions. To begin with, we review reference \onlinecite{Izaguirre2016a} to explain the dispersion relation in Sec. \ref{sec-dr}.
+Neutrino flavor conversions in vacuum are determined by linear equation of motion. In other words, the vacuum Hamiltonian doesn't depend on the state of neutrino flavors. However, neutrinos propagate in dense neutrino media demonstrate highly nonlinear flavor transformations due to forward scattering interactions of neutrinos which lead to flavor conversions instabilities. To investigate the nonlinear neutrino flavor conversions, linear stability analysis has been applied \cite{Banerjee2011a,Raffelt2013}. Recent study by I. Izaguirre, G. Raffelt, and I. Tamborra showed that linear stability is also determined by the dispersion relation \cite{Izaguirre2016a}. Moreover, they conclued that neutrino flavor conversion instabilities occur within gaps in dispersion relation. We will prove that neutrino flavor conversion instabilities is not exactly mapped to gaps in dispersion relation for discrete emission with more than two angles or continuous angular distributions of neutrino emissions. In Sec. \ref{sec-dr}, we review reference \onlinecite{Izaguirre2016a} to explain the dispersion relation.
 
 
 
 \section{\label{sec-dr}Dispersion Relation of Neutrino Flavor Conversion}
 
-We consider two-flavor scenario of neutrino oscillations. As an initial condition, all neutrinos and antineutrinos are emitted approximately as electron flavors. For the purpose of linear stability analysis, the single particle density matrix for neutrinos is explicitly defined as
+We consider two-flavor scenario ($\nu_{\mathrm e}$ and $\nu_{\mathrm x}$) of neutrino oscillations. As for initial condition, all neutrinos and antineutrinos are emitted approximately as electron flavors. To determine the neutrino ensemble flavor evolution, flavor density matrices of neutrinos and antineutrinos with energy $E$, momentum direction $\hat{\mathbf v}$ are defined
+\begin{align}
+\rho_n(\hat{\mathbf v},E) = & \left(f_{\nu_{\mathrm e}}(\hat{\mathbf v},E) - f_{\nu_{\mathrm x}}(\hat{\mathbf v},E) \right) \rho \\
+\bar\rho_n(\hat{\mathbf v},E) = & \left( f_{\bar\nu_{\mathrm e}}(\hat{\mathbf v},E) - f_{\bar\nu_{\mathrm x}}(\hat{\mathbf v},E)  \right)\bar \rho,
+\end{align}
+where $\rho$ and $\bar \rho$ are the single particle neutrino density matrix for neutrino and antineutrino respectively. We use bar to denote antineutrinos. Equation of motion for neutrino flavor evolution is,
 \begin{equation}
-   \rho = \frac{1}{2} \begin{pmatrix}
-   1 & \epsilon \\
-   \epsilon^* & -1
-\end{pmatrix}.
-\end{equation}
-To determine the flavor evolution, Liouville equation of neutrinos is used,
-\begin{equation}
-\ii (\partial_t + \mathbf v\cdot \mathbf{\nabla}) \rho = \left[ H, \rho \right],
+\ii (\partial_t + \mathbf v\cdot \mathbf{\nabla}) \rho_n = \left[H, \rho_n \right],
 \label{eqn-liouville-eqn}
 \end{equation}
-where $H$ is the Hamiltonian for neutrino oscillations. Density matrix and equation of motion for antineutrinos are defined in the same maner with the corresponding Hamiltonian for antineutrinos.
+where $H$ is the Hamiltonian for neutrino oscillations.
 
 In principle, neutrino oscillations Hamiltonian depends on three different contributions, vacuum oscillations $H_{\mathrm v}$, interactions with matter $H_{\mathrm m}$, and interactions with neutrinos themselves $H_{\nu\nu}$. The concentration of this work is on fast neutrino oscillations, which would occur even without neutrino mass differences. However, the vacuum term can always be combined with matter term by redefining new matter potential. Thus neglecting vacuum term doesn't change the formalism of linear stability analysis. For completeness, we write down the vacuum oscillations term
 \begin{equation}
@@ -151,13 +150,10 @@ In order to calculate the neutrino forward scattering, the spectrum of neutrino 
 \begin{equation}
 H_{\nu\nu} = \sqrt{2} G_{\mathrm F} \iint \frac{\mathrm d \cos\theta' \mathrm d\phi'}{4\pi} v^\mu v'_\mu \int \frac{E'^2 \mathrm d E'}{2\pi^2} ( \rho_n -  \bar\rho_n ),
 \end{equation}
-where $v^\mu = ( 1, \sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta )^{\mathrm T}$ is the four velocity of (anti)neutrinos in spherical coordinate system, $\rho_n$ and $\bar \rho_n$ are the flavor density matrix of neutrino ensemble,
-\begin{align}
-\rho_n(\hat{\mathbf v},E) = & \left(f_{\nu_{\mathrm e}}(\hat{\mathbf v},E) - f_{\nu_{\mathrm x}}(\hat{\mathbf v},E) \right) \rho \\
-\bar\rho_n(\hat{\mathbf v},E) = & \left( f_{\bar\nu_{\mathrm e}}(\hat{\mathbf v},E) - f_{\bar\nu_{\mathrm x}}(\hat{\mathbf v},E)  \right)\bar \rho.
-\end{align}
+where $v^\mu = ( 1, \sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta )^{\mathrm T}$ is the four velocity of (anti)neutrinos in spherical coordinate system, $\rho_n$ and $\bar \rho_n$ are the 
+Density matrix and equation of motion for antineutrinos are defined in the same maner with the corresponding Hamiltonian for antineutrinos \cite{Duan2010}.
 
-In reference \onlinecite{Izaguirre2016a} the authors assumed that the distribution of $\nu_x$ and $\bar\nu_x$ are the same, namely $ f_{\nu_{\mathrm x}}(\hat{\mathbf v},E)  - f_{\bar\nu_{\mathrm x}}(\hat{\mathbf v},E)=0$. We follow the same simplification in this paper. In addition, we following the same definition of electron lepton number (ELN) of neutrinos travelling in direction $\hat{\mathbf v}$,
+In reference \onlinecite{Izaguirre2016a} the authors assumed that the distribution of $\nu_x$ and $\bar\nu_x$ are the same, namely $ f_{\nu_{\mathrm x}}(\hat{\mathbf v},E)  - f_{\bar\nu_{\mathrm x}}(\hat{\mathbf v},E)=0$. We follow the same simplifications in this paper. In addition, we following the same definition of electron lepton number (ELN) of neutrinos travelling in direction $\hat{\mathbf v}$,
 \begin{equation}
 G(\hat{\mathbf v}) =  \sqrt{2}G_{\mathrm F} \int \frac{E'^2 \mathrm d E'}{2\pi^2} ( f_{\nu_{\mathrm e}}(\cos\theta',\phi',E')  - f_{\bar\nu_{\mathrm e}}(\cos\theta',\phi',E')  ).
 \end{equation}
