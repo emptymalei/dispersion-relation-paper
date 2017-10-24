@@ -118,41 +118,27 @@ ABSTRACT PLACEHOLDER
 
 (Should talk about some very very basic backgrounds like the applications and why it is important.)
 
-Neutrino flavor conversions in vacuum are determined by linear equation of motion. In other words, the vacuum Hamiltonian doesn't depend on the state of neutrino flavors. However, neutrinos propagate in dense neutrino media demonstrate highly nonlinear flavor transformations due to forward scattering interactions of neutrinos which lead to flavor conversions instabilities. To investigate the nonlinear neutrino flavor conversions, linear stability analysis has been applied \cite{Banerjee2011a,Raffelt2013}. Recent study by I. Izaguirre, G. Raffelt, and I. Tamborra showed that linear stability is also determined by the dispersion relation \cite{Izaguirre2016a}. Moreover, they conclued that neutrino flavor conversion instabilities occur within gaps in dispersion relation. We will prove that neutrino flavor conversion instabilities is not exactly mapped to gaps in dispersion relation for discrete emission with more than two angles or continuous angular distributions of neutrino emissions. In Sec. \ref{sec-dr}, we review reference \onlinecite{Izaguirre2016a} to explain the dispersion relation.
+
+Neutrino flavor conversions in vacuum are described by linear Sch\"{o}dinger eqution where the vacuum Hamiltonian doesn't depend on the state of neutrino flavors. It leads to periodic oscillations in different flavors. However, neutrinos propagate in dense neutrino media demonstrate highly nonlinear flavor transformations due to forward scattering interactions where the Hamiltonian is determined by the flavor contents. This nonlinear Schr\"{o}dinger equation can result in instabilities in neutrino flavor conversions. To investigate the complicated behavior of such nonlinear flavor conversions, linear stability analysis has been introduced \cite{Banerjee2011a,Raffelt2013}. Recent study by I. Izaguirre, G. Raffelt, and I. Tamborra showed that the dispersion relation gaps of the linearized equation of motion tell us the linear stability of neutrino flavor conversions \cite{Izaguirre2016a}. We will prove that neutrino flavor conversion instabilities is not exactly mapped to gaps in dispersion relation in some cases. In Sec. \ref{sec-dr}, we review linear stability analysis and dispersion relation based on references \onlinecite{Raffelt2013} and \onlinecite{Izaguirre2016a}.
+
+(Introduce what are we gonna do in other sections when the paper is finished.)
 
 
 
 \section{\label{sec-dr}Dispersion Relation of Neutrino Flavor Conversion}
 
-We consider two-flavor scenario ($\nu_{\mathrm e}$ and $\nu_{\mathrm x}$) of neutrino oscillations. As for initial condition, all neutrinos and antineutrinos are emitted approximately as electron flavors. To determine the neutrino ensemble flavor evolution, flavor density matrices of neutrinos and antineutrinos with energy $E$, momentum direction $\hat{\mathbf v}$ are defined
-\begin{align}
-\rho_n(\hat{\mathbf v},E) = & \left(f_{\nu_{\mathrm e}}(\hat{\mathbf v},E) - f_{\nu_{\mathrm x}}(\hat{\mathbf v},E) \right) \rho \\
-\bar\rho_n(\hat{\mathbf v},E) = & \left( f_{\bar\nu_{\mathrm e}}(\hat{\mathbf v},E) - f_{\bar\nu_{\mathrm x}}(\hat{\mathbf v},E)  \right)\bar \rho,
-\end{align}
-where $\rho$ and $\bar \rho$ are the single particle neutrino density matrix for neutrino and antineutrino respectively. We use bar to denote antineutrinos. Equation of motion for neutrino flavor evolution is,
+We consider two-flavor scenario ($\nu_{\mathrm e}$ and $\nu_{\mathrm x}$) of neutrino oscillations. We also assume that all neutrinos and antineutrinos are emitted as electron flavor. The flavor evolution of neutrino ensemble depends on flavor density matrices of neutrinos $\rho$ and antineutrinos $\bar\rho$ with energy $E$, direction of velocity $\hat{\mathbf v}$,
 \begin{equation}
-\ii (\partial_t + \mathbf v\cdot \mathbf{\nabla}) \rho_n = \left[H, \rho_n \right],
+\ii (\partial_t + \mathbf v\cdot \mathbf{\nabla}) \rho = \left[H, \rho_n \right],
 \label{eqn-liouville-eqn}
 \end{equation}
-where $H$ is the Hamiltonian for neutrino oscillations.
-
-In principle, neutrino oscillations Hamiltonian depends on three different contributions, vacuum oscillations $H_{\mathrm v}$, interactions with matter $H_{\mathrm m}$, and interactions with neutrinos themselves $H_{\nu\nu}$. The concentration of this work is on fast neutrino oscillations, which would occur even without neutrino mass differences. However, the vacuum term can always be combined with matter term by redefining new matter potential. Thus neglecting vacuum term doesn't change the formalism of linear stability analysis. For completeness, we write down the vacuum oscillations term
-\begin{equation}
-   H_{\mathrm v} = -\frac{\omega_{\mathrm v}}{2} \sigma_3,
-\end{equation}
-where $\omega = \frac{\delta m^2}{2}$ with $\delta m^2$ being the mass squared difference in this two flavor scenario. Interaction with matter is described by matter potential
-\begin{equation}
-   H_{\mathrm m} = \frac{1}{2}\lambda \sigma_3.
-\end{equation}
-where $\lambda = \sqrt{2}G_{\mathrm F} n_{\mathrm e}$. $G_{\mathrm F}$ is the Fermi constant and $n_{\mathrm e}$ is the number density of electrons in the background.
-
-In order to calculate the neutrino forward scattering, the spectrum of neutrino (antineutrinos) distributions $f_{\nu_{\mathrm e}(\bar \nu_{\mathrm e})}(\hat{\mathbf v}, E)$ and $f_{\nu_{\mathrm x}(\bar \nu_{\mathrm x})}(\hat{\mathbf v}, E)$ is required, where $\hat{\mathbf v}$ is the velocity direction of neutrinos (antineutrinos). Neutrino forward scattering potential is
+where $H$ is the Hamiltonian for neutrino oscillations. In the context, Hamiltonian depends on three different contributions from vacuum oscillations $H_{\mathrm v}$, interactions with matter $H_{\mathrm m}$, and interactions with neutrinos themselves $H_{\nu\nu}$. In this work, we ignore vacuum and matter terms since the concentration is on fast neutrino oscillations, which would occur even without neutrino mass differences \cite{Chakraborty2016,Dasgupta2017}. In order to calculate the neutrino forward scattering term $H_{\nu\nu}$, the spectrum of neutrino (antineutrinos) distributions $f_{\nu_{\mathrm e}(\bar \nu_{\mathrm e})}(\hat{\mathbf v}, E)$ and $f_{\nu_{\mathrm x}(\bar \nu_{\mathrm x})}(\hat{\mathbf v}, E)$ is required, where $\hat{\mathbf v}$ is the velocity direction of neutrinos (antineutrinos). Neutrino forward scattering potential is
 \begin{equation}
 H_{\nu\nu} = \sqrt{2} G_{\mathrm F} \iint \frac{\mathrm d \cos\theta' \mathrm d\phi'}{4\pi} v^\mu v'_\mu \int \frac{E'^2 \mathrm d E'}{2\pi^2} ( \rho_n -  \bar\rho_n ),
 \end{equation}
 where we choose $v^\mu = ( 1, \sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta )^{\mathrm T}$ is the four velocity of (anti)neutrinos in spherical coordinate system. Equation of motion for antineutrinos are defined in the same maner with the corresponding Hamiltonian for antineutrinos \cite{Duan2010}.
 
-In reference \onlinecite{Izaguirre2016a} the authors assumed that the distribution of $\nu_x$ and $\bar\nu_x$ are the same, namely $ f_{\nu_{\mathrm x}}(\hat{\mathbf v},E)  - f_{\bar\nu_{\mathrm x}}(\hat{\mathbf v},E)=0$. We follow the same simplifications in this paper. In addition, we following the same definition of electron lepton number (ELN) of neutrinos travelling in direction $\hat{\mathbf v}$,
+We follow the same assumption in reference \onlinecite{Izaguirre2016a} that the the distribution of $\nu_x$ and $\bar\nu_x$ are the same, namely $ f_{\nu_{\mathrm x}}(\hat{\mathbf v},E)  - f_{\bar\nu_{\mathrm x}}(\hat{\mathbf v},E)=0$. In addition, we following the same definition of electron lepton number (ELN) of neutrinos travelling in direction $\hat{\mathbf v}$,
 \begin{equation}
 G(\hat{\mathbf v}) =  \sqrt{2}G_{\mathrm F} \int \frac{E'^2 \mathrm d E'}{2\pi^2} ( f_{\nu_{\mathrm e}}(\cos\theta',\phi',E')  - f_{\bar\nu_{\mathrm e}}(\cos\theta',\phi',E')  ).
 \end{equation}
@@ -233,7 +219,7 @@ The MAA solution becomes an equation of hypobola for $\omega$ and $k$, which has
 \end{figure}
 
 
-However, this conclusion can not be generalized to arbitrary number of emission angles. As an example, we perform linear stability analysi of the three zenith angles emission configuration which is determined by a cubic function both in $\omega$ and $k$. Thus three solutions of $k$ ($\omega$) for given real $\omega$ ($k$) are epxected. As long as real solutions disappear, complex solutions emerge, which leads to instabilities occur even without an actual gap. As an example, we fix $\omega= 0.5$ for MAA solution (Fig. \ref{fig-dr-db} lower left panel). The three solutions of $k$ are $k=-4.6, 0.29, 1.2$.  $0.2$ which are all real and indicates no spatial instabilities. However, for another real $\omega = 0.2$, we find only one real solution $k=0.4$ from dispersion relation. The other solutions are complex and proven to be $k = -0.557106\pm 0.966535\mathrm i$ where the value with positive imaginary part leads to exponential growth. This gap and instability inconsistancy also exists in continuous angular distribution of neutrino emission.
+However, this conclusion can not be generalized to arbitrary number of emission angles. As an example, we perform linear stability analysis of the three zenith angles emission configuration which is determined by a cubic function both in $\omega$ and $k$. Thus three solutions of $k$ ($\omega$) for given real $\omega$ ($k$) are epxected. As long as real solutions disappear, complex solutions emerge, which leads to instabilities occur even without an actual gap. As an example, we fix $\omega= 0.5$ for MAA solution (Fig. \ref{fig-dr-db} lower left panel). The three solutions of $k$ are $k=-4.6, 0.29, 1.2$.  $0.2$ which are all real and indicates no spatial instabilities. However, for another real $\omega = 0.2$, we find only one real solution $k=0.4$ from dispersion relation. The other solutions are complex and proven to be $k = -0.557106\pm 0.966535\mathrm i$ where the value with positive imaginary part leads to exponential growth. This gap and instability inconsistancy also exists in continuous angular distribution of neutrino emission.
 
 
 
@@ -380,7 +366,6 @@ determines that the two solutions are either in the region $\omega>0$ or in the 
 \end{itemize}
 
 
-But I have a question. Is it really reliable? Should I use principal value integral for box spectrum DR?
 
 We are still not crystal clear about the relation between gap and lsa.
 
