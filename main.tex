@@ -138,16 +138,29 @@ H_{\nu\nu} = \sqrt{2} G_{\mathrm F} \iint \frac{\mathrm d \cos\theta' \mathrm d\
 \end{equation}
 where $v^\mu = ( 1, \sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta )^{\mathrm T}$ is the four velocity of (anti)neutrinos in our spherical coordinate system. Without vacuum contribution, the equation of motion for antineutrinos has the same form \cite{Duan2010}.
 
-We follow the same assumption in reference \onlinecite{Izaguirre2016a} that the the distribution of $\nu_x$ and $\bar\nu_x$ are the same, namely $ f_{\nu_{\mathrm x}}(\hat{\mathbf v},E)  - f_{\bar\nu_{\mathrm x}}(\hat{\mathbf v},E)=0$. In addition, we have the same definition of electron lepton number (ELN) of neutrinos travelling in direction $\hat{\mathbf v}$,
+We follow the same assumption in reference \onlinecite{Izaguirre2016a} that the the distribution of $\nu_x$ and $\bar\nu_x$ are the same, namely $ f_{\nu_{\mathrm x}}(\hat{\mathbf v},E)  - f_{\bar\nu_{\mathrm x}}(\hat{\mathbf v},E)=0$. In addition, we have the same definition of electron lepton number (ELN) of neutrinos travelling in direction $\hat{\mathbf v}$ \cite{Izaguirre2016a},
 \begin{equation}
 G(\hat{\mathbf v}) =  \sqrt{2}G_{\mathrm F} \int \frac{E'^2 \mathrm d E'}{2\pi^2} ( f_{\nu_{\mathrm e}}(\cos\theta',\phi',E')  - f_{\bar\nu_{\mathrm e}}(\cos\theta',\phi',E')  ).
 \end{equation}
-The ELN is useful in linear stability analysis where we assumed that $\epsilon$ is small and evolve in the form $\tilde\epsilon e^{-i(\Omega t - \mathbf K\cdot \mathbf x)}$. Thus the linearized equation of motion depends only on $G(\hat{\mathbf v})$ and $\hat{\mathbf v}$,
+To perform linear stability analysis, we assume that the density matrix has the form
 \begin{equation}
-\ii(\partial_t + \hat{\mathbf v} \cdot \nabla) \epsilon
+\rho = \bar \rho = \begin{pmatrix}
+1 & \epsilon \\
+\epsilon^* & 0
+\end{pmatrix},
+\end{equation}
+where $\lvert \epsilon \rvert \ll 1$. As a result, the linearized equations of motion depends only on $G(\hat{\mathbf v})$ and $\hat{\mathbf v}$. We also assume that all neutrinos and antineutrinos undergo the same behavior in linear regime, $\epsilon = \tilde\epsilon e^{-\ii (\Omega t - \mathbf K\cdot \mathbf x)}$. Izaguirre, Raffelt, and Tamborra defined the polarization tensor \cite{Izaguirre2016a},
+\begin{equation}
+\Pi^\mu_{\phantom{\mu}\nu} = 1 + \int \frac{d\Omega}{4\pi} G(\theta,\phi) \frac{v^\mu v_\nu}{\omega- k \hat{\mathbf k}\cdot \hat{\mathbf v} },
+\end{equation}
+which defines the dispersion relation $\Pi^\mu_{\phantom{\mu}\nu} a^\nu = 0$, with $a^\nu = \int \frac{d\cos\theta' d\phi'}{4\pi} G(\hat{\mathbf v}') v^\nu \tilde\epsilon$. We find the nontrivial solutions by setting \cite{Izaguirre2016a}, 
+\begin{equation}
+\operatorname{det}\left( \Pi^\mu_{\phantom{\mu}\nu} \right) = 0.
+\label{eqn-dr-determinant-equation}
 \end{equation}
 
-Linear stability analysis of Eq. \eqref{eqn-liouville-eqn} for axial symmetric neutrino emission shows that
+
+For simplicity, we consider axial symmetric neutrino emission so that Eq. \eqref{eqn-dr-determinant-equation} becomes
 \begin{align}
 &\det \left( \omega \mathrm{I} + \frac{1}{2}
 \begin{pmatrix}
@@ -157,26 +170,27 @@ Linear stability analysis of Eq. \eqref{eqn-liouville-eqn} for axial symmetric n
    I_1 & 0 & 0 & -I_2
 \end{pmatrix}\right) \nonumber\\
 &=0,
-\label{eqn-det-polarization-tensor}
+\label{eqn-det-polarization-tensor-axial}
 \end{align}
-where
+where $\mathbf I$ is the rank 4 identity matrix and
 \begin{equation}
    I_m =\int_{-1}^{1} d u G(u) \frac{u^m}{1 -  \left(\lvert k\rvert /\omega\right) u }.
 \end{equation}
-where we define $u=\cos\theta$ \cite{Raffelt2013}. $\lvert k \rvert /\omega$ is defined as the refractive index $n$ of the flavor wave. For spectrum $G(u)$ without zero values, the forbidden region is given by $1 -  \left(\lvert k\rvert /\omega\right) u\leq 0$. Two categories of solutions were found, namely the multi-azimuthal angle (MAA) solution and multi-zenith angle (MZA) solution \cite{Raffelt2013}. The MAA solution is related to symmetry breaking in azimuthal angle only, which is determined by
+where we define $u=\cos\theta$. Eq. \eqref{eqn-det-polarization-tensor-axial} is equivalent to the result in reference \onlinecite{Raffelt2013}. $\lvert k \rvert /\omega$ is defined as the refractive index $n$ of the flavor wave. For spectrum $G(u)$ without zero values, the forbidden region is given by $1 -  \left(\lvert k\rvert /\omega\right) u\leq 0$. 
+
+The dispersion relations can be categorized into two different types by symmetries. To incorporate azimuthal symmetry, we define solutions related to the first and second element of $a^\nu$ ($\nu=1,2$) to be multi-azimuthal angle (MAA) solutions since they are the only solutions that depend on azimuthal angle $\phi$. The other solutions which are related to $\nu=0,3$ are defined to be the multi-zenith angle (MZA) solutions. The MAA solution is related to symmetry breaking in azimuthal angle only, which is determined by
 \begin{equation}
    \omega = \frac{1}{4}(I_0 - I_2).
    \label{eqn-maa}
 \end{equation}
-The MZA solution is related to symmetry breaking in both azimuthal angle and zenith angle, which is
+Similarly, the MZA solution is related to symmetry breaking in both azimuthal angle and zenith angle, which is
 \begin{equation}
 \omega = - \frac{1}{4} \left( I_0 - I_2 \pm \sqrt{ (I_0 + I_2 - 2 I_1) (I_0 + I_2 + 2 I_1) } \right).
 \label{eqn-mza}
 \end{equation}
-We denote the solution associated with $+$ sign as MZA+, while the solution assocated with $-$ sign as MZA-. The two solutions are connected to each other in dispersion relations. In general, it doesn't provide physical insights to distingush the two branches of solutions since they are simply two branches of the solution.
+We denote the solution associated with $+$ sign in Eq. \eqref{eqn-mza} as MZA+, while the solution assocated with $-$ sign as MZA-. The two solutions are connected to each other in dispersion relations. In general, it doesn't provide physical insights to distingush the two branches of solutions since they are simply two branches of the solution.
 
-Eq. \eqref{eqn-det-polarization-tensor} is equivalent to dispersion relation defined in reference \onlinecite{Izaguirre2016a}. In other words, the solutions \eqref{eqn-maa} and \eqref{eqn-mza} are dispersion relations $D(\omega,\mathbf k)$ for a chosen direction of $\hat{\mathbf k} = \hat{\mathbf z}$.
-
+The solutions to Eq. \eqref{eqn-maa} and Eq. \eqref{eqn-mza} are dispersion relations $D(\omega,\mathbf k)$ for a chosen direction of $\hat{\mathbf k} = \hat{\mathbf z}$ with axial symmetric neutrino emission.
 
 
 
@@ -326,8 +340,6 @@ determines that the two solutions are either in the region $\omega>0$ or in the 
 
 
 \section{\label{sec-conclusion}Conclusion}
-
-
 
 
 
