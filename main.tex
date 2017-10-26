@@ -66,6 +66,7 @@ preprint,
 \usepackage[normalem]{ulem}
 \usepackage{xcolor}
 \usepackage{accents}
+\usepackage{mathrsfs}
 
 
 \begin{document}
@@ -153,7 +154,7 @@ where $\lvert \epsilon \rvert \ll 1$. As a result, the linearized equations of m
 \begin{equation}
 \Pi^\mu_{\phantom{\mu}\nu} = 1 + \int \frac{d\Omega}{4\pi} G(\theta,\phi) \frac{v^\mu v_\nu}{\omega- k \hat{\mathbf k}\cdot \hat{\mathbf v} },
 \end{equation}
-which defines the dispersion relation $\Pi^\mu_{\phantom{\mu}\nu} a^\nu = 0$, with $a^\nu = \int \frac{d\cos\theta' d\phi'}{4\pi} G(\hat{\mathbf v}') v^\nu \tilde\epsilon$. We find the nontrivial solutions by setting \cite{Izaguirre2016a}, 
+which defines the dispersion relation $\Pi^\mu_{\phantom{\mu}\nu} a^\nu = 0$, with $a^\nu = \int \frac{d\cos\theta' d\phi'}{4\pi} G(\hat{\mathbf v}') v^\nu \tilde\epsilon$. We find the nontrivial solutions by setting \cite{Izaguirre2016a},
 \begin{equation}
 \operatorname{det}\left( \Pi^\mu_{\phantom{\mu}\nu} \right) = 0.
 \label{eqn-dr-determinant-equation}
@@ -176,7 +177,7 @@ where $\mathbf I$ is the rank 4 identity matrix and
 \begin{equation}
    I_m =\int_{-1}^{1} d u G(u) \frac{u^m}{1 -  \left(\lvert k\rvert /\omega\right) u }.
 \end{equation}
-where we define $u=\cos\theta$. Eq. \eqref{eqn-det-polarization-tensor-axial} is equivalent to the result in reference \onlinecite{Raffelt2013}. $\lvert k \rvert /\omega$ is defined as the refractive index $n$ of the flavor wave. For spectrum $G(u)$ without zero values, the forbidden region is given by $1 -  \left(\lvert k\rvert /\omega\right) u\leq 0$. 
+where we define $u=\cos\theta$. Eq. \eqref{eqn-det-polarization-tensor-axial} is equivalent to the result in reference \onlinecite{Raffelt2013}. $\lvert k \rvert /\omega$ is defined as the refractive index $n$ of the flavor wave. For spectrum $G(u)$ without zero values, the forbidden region is given by $1 -  \left(\lvert k\rvert /\omega\right) u\leq 0$.
 
 The dispersion relations can be categorized into two different types by symmetries. To incorporate azimuthal symmetry, we define solutions related to the first and second element of $a^\nu$ ($\nu=1,2$) to be multi-azimuthal angle (MAA) solutions since they are the only solutions that depend on azimuthal angle $\phi$. The other solutions which are related to $\nu=0,3$ are defined to be the multi-zenith angle (MZA) solutions. The MAA solution is related to symmetry breaking in azimuthal angle only, which is determined by
 \begin{equation}
@@ -213,7 +214,7 @@ We continue the discussion of axial symmetric neutrino emissions but with discre
 G(u)= \sum_{i=1}^2 g_i \delta(u - u_i).
 \end{equation}
 
-The MAA solution becomes an equation of hypobola for $\omega$ and $k$, which has asymptotes $\omega = k u_i$ for $i=1,2$. Meanwhile, hyperbola equation has two solutions of $\omega$ ($k$) for any given real $k$ ($\omega$). The solutions are either real which indicates stable solutions or complex which indicates exponential growth or decrease in linear regime. On the other hand, non-existence of real solutions of $\omega$ ($k$) for given real $k$ ($\omega$) is equivalent to gap in dispersion relation. Thus the equivalence of gap and instabilities is guaranteed in neutrino emission with two-zenith-angle emission. Upper panels of Fig. \ref{fig-dr-db} is reproduction of left panels of Fig. 1 in reference \onlinecite{Izaguirre2016a}. The dispersion relation is shown as black lines. The real part $\omega_{\mathrm R}$ is shown as red solid lines. $\omega_{\mathrm R} \pm \omega_{\mathrm I}$ are shown are red dashed lines, where $\omega_{\mathrm I}$ is the imaginary part of $\omega$. 
+The MAA solution becomes an equation of hypobola for $\omega$ and $k$, which has asymptotes $\omega = k u_i$ for $i=1,2$. Meanwhile, hyperbola equation has two solutions of $\omega$ ($k$) for any given real $k$ ($\omega$). The solutions are either real which indicates stable solutions or complex which indicates exponential growth or decrease in linear regime. On the other hand, non-existence of real solutions of $\omega$ ($k$) for given real $k$ ($\omega$) is equivalent to gap in dispersion relation. Thus the equivalence of gap and instabilities is guaranteed in neutrino emission with two-zenith-angle emission. The numerical calculations is normalized using the maximium value in spectrum which is a convention we follow for all discrete emission calculations. Unit for $\omega$ and $k$ can be determined once the exact spectrum is determined. Upper panels of Fig. \ref{fig-dr-db} is reproduction of left panels of Fig. 1 in reference \onlinecite{Izaguirre2016a}. The dispersion relation is shown as black lines. The real part $\omega_{\mathrm R}$ is shown as red solid lines. $\omega_{\mathrm R} \pm \omega_{\mathrm I}$ are shown are red dashed lines, where $\omega_{\mathrm I}$ is the imaginary part of $\omega$.
 
 
 
@@ -236,15 +237,11 @@ The MAA solution becomes an equation of hypobola for $\omega$ and $k$, which has
 \end{figure}
 
 
-However, this conclusion can not be generalized to arbitrary number of emission angles. As an example, we perform linear stability analysis of the three zenith angles emission configuration which is determined by a cubic function both in $\omega$ and $k$. Three solutions of $k(\omega)$ for given real $\omega(k)$  are expected. As long as real solutions disappear, complex solutions emerge, which leads to instabilities occur even without an actual gap. Rather the decrease in the number of real solutions for fixed $\omega$ or $k$ corresponds to the instabilities. In Fig. \ref{fig-dr-db}, we fix $\omega= 0.5$ for MAA solution (Fig. \ref{fig-dr-db} lower left panel). The three solutions of $k$ are $k=-4.6, 0.29, 1.2$.  $0.2$ which are all real and indicates no spatial instabilities. However, for another real $\omega = 0.2$, we find only one real solution $k=0.4$ from dispersion relation. The other solutions are complex and proven to be $k = -0.557106\pm 0.966535\mathrm i$ where the value with positive imaginary part leads to exponential growth. This gap and instability inconsistency also exists in continuous angular distribution of neutrino emission.
+However, this conclusion can not be generalized to arbitrary number of emission angles. As an example, we perform linear stability analysis of the three zenith angles emission configuration which is determined by a cubic function both in $\omega$ and $k$. Three solutions of $k(\omega)$ for given real $\omega(k)$  are expected. As long as real solutions disappear, complex solutions emerge, which leads to instabilities occur even without an actual gap. Rather the decrease in the number of real solutions for fixed $\omega$ or $k$ corresponds to the instabilities. As an example, we plotted dispersion relation and instabilities for three zenith angles in lower panels of Fig. \ref{fig-dr-db}. For a given value of $\omega$ such as $\omega= 0.5$, the three MAA solutions (Fig. \ref{fig-dr-db} lower left panel) of $k$ are $k=-4.6, 0.29, 1.2$. All three solutions are all real and indicate no spatial instabilities which is confirmed by calculation of instabilities shown as red blob. However, for another real $\omega = 0.2$, we find only one real solution $k=0.4$ from dispersion relation. The other solutions are complex and proven to be $k = -0.557106\pm 0.966535\mathrm i$ where the value with positive imaginary part leads to exponential growth. We conclude that instabilities doesn't require gap in dispersion relation except for two emission angles.
 
+In core collapse supernova and neutron star mergers, neutrino emission is not in discrete zenith angles. More realistic models involves continuous zenith angle ELN spectra. We will prove that instabilities for continuous emission angles do not necessarily correspond to gap in dispersion relation. In the earlier works of fast modes, Sawyer analyzed a box shaped angular distribution of neutrino emission \cite{Sawyer2016}. To address the generality of our conclusion, we repeat the calculation for box spectrum with crossing.
 
-
-In core collapse supernova, neutrino emission is not in discrete zenith angles. More realistic models involves continuous zenith angle ELN spectra. In the earlier works of fast modes, Sawyer analyzed a box shaped angular distribution of neutrino emission \cite{Sawyer2016}. To address the fact that instability does not always show up in dispersion relation as gap, we show that the relation between instability and gap in dispersion relation can break down for box spectrum with crossing.
-
-
-
-We construct a box spectrum with value $-0.1$ within $u\in [-1,-0.3)$ and value $1$ within $[-0.3,1]$ as shown in the top left panel of Fig. \ref{fig-box-c1}. With the spectrum defined, we calculate the dispersion relation and find out complex values of $k$ for real $\omega$. The results show that both the MAA solution and MZA solutioins contain only one curve. No gap is formed but we observe instabilities, which are plotted as colored dots.
+We construct a box spectrum with value $-0.1$ within $u\in [-1,-0.3)$ and value $1$ within $[-0.3,1]$ as shown in the top left panel of Fig. \ref{fig-box-c1}. As in the discrete emission case, we normalize all quantities using the maximium value of the spectrum. With the spectrum defined, we calculate the dispersion relation and find out complex values of $k$ for real $\omega$. The result shows that the dispersion relation of both MAA solution and MZA solution contains only one curve. No gap is formed but we observe instabilities between this curve and $\omega=0$ in MAA solution as well as two unstable regions of $k$ in MZA solution, which are plotted as red lines.
 
 
 \begin{figure}
@@ -257,32 +254,15 @@ We construct a box spectrum with value $-0.1$ within $u\in [-1,-0.3)$ and value 
    \minipage{0.49\textwidth}
    \includegraphics[width=\linewidth]{assets/spectBoxC1MZADRPltBlob.pdf}
    \endminipage\hfill
-   \caption{Dispersion relation and linear stability analysis for box spectrum. The box spectrum is defined to be $-0.1$ within range $u\in [-1,-0.3)$ and $1$ within range $u\in [-0.3,1]$ as shown in the top left panel. The top right panel shows the dispersion relation and the complex $k$ for real $\omega$ for MAA solution. The lower panels shows the dispersion relation and complex $k$ for real $\omega$ for MZA solutions. Dashed gray lines are lines of $\omega= \pm k$ which sets the boundaries of the forbidden region for dispersion relation.
+   \caption{Dispersion relation and linear stability analysis for box spectrum. The box spectrum is defined to be $-0.1$ within range $u\in [-1,-0.3)$ and $1$ within range $u\in [-0.3,1]$. Left panel shows the dispersion relation and the complex $k$ for real $\omega$ for MAA solution. Right panel is the corresponding result for MZA solution. Dash-dotted gray lines are $\omega= \pm k$ which sets the boundaries of the forbidden region for dispersion relation.
     }
    \label{fig-box-c1}
 \end{figure}
 
 
-
-
-
-
-
-{\color{red}\bf The forbidden region is determined by the emission angles. But is the forbidden region worth mentioning here? I don't think so.}
-
-{\color{red}\bf I could show the results for C4 since it has both MAA and MZA instabilities. But we care about complex $k$ the most so I guess WC4 is fine.}
-
-{\color{red}\bf Should I combine the MZA+ and MZA- solutions? }
-
-{\color{red}\bf Font size in the plots are too small. But the font size depends on whether I need to combine MZA+ and MZA- solutions. }
-
-{\color{red}\bf $\omega=0$ lines in the plots should be made distinguishable from the DR. }
-
-
-
 \section{\label{sec-gap-to-instability}From Gap to Instability}
 
-In the situations that the ELN spectrum has no crossing, gap indeed indicates instabilities, as shown in \onlinecite{Izaguirre2016a}. In this section we prove that the instabilities in MAA, MZA+, or MZA- solution can only appear in either region $\omega\leq 0$ or region $\omega \geq 0$. As it suggests, the instability regions propagate only between the dispersion relation and the axis $\omega=0$. We reproduce the calculation in \onlinecite{Izaguirre2016a} using the same Garching core-collapse supernova data set \cite{garching-ccsn-data}. The spectrum shown in the left panel of Fig. \ref{fig-garching} is polynomial fitting of the Garching 1D supernova simulation data.
+In the case that the smooth and continuous ELN spectrum has no crossing, gap indeed indicates instabilities, as shown in reference \onlinecite{Izaguirre2016a}. In this section we prove that the instabilities in MAA, MZA+, or MZA- solution can only appear in either region $\omega\leq 0$ or region $\omega \geq 0$. As it suggests, the instability regions propagate only between the dispersion relation curves and the axis $\omega=0$. We reproduce the calculation in \onlinecite{Izaguirre2016a} using the same Garching core-collapse supernova data set \cite{garching-ccsn-data}. The spectrum shown in the left panel of Fig. \ref{fig-garching} is polynomial fitting of the Garching 1D supernova simulation data.
 
 
 
