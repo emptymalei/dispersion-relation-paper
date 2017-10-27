@@ -4,3 +4,4 @@
 4. The forbidden region for box spectrum is determined by the emission angles. But is the forbidden region worth mentioning here? I don't think so.
 5. I could show the results for box C4 since it has both MAA and MZA instabilities. But we care about complex $k$ the most so I guess WC4 is fine.
 6. Should I combine the MZA+ and MZA- solutions in box spectrum?
+7. Mark units for the garching spectrum plot.
