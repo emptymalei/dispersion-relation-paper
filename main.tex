@@ -286,17 +286,20 @@ In the case that the smooth and continuous ELN spectrum has no crossing, gap ind
 
 % \subsection{\label{sec-omega-to-zero}Instabilities at $\omega\to 0$}
 
-Suppose we are looking for complex solutions for given real omega as in Fig. \ref{fig-garching}, MAA solution Eq. \eqref{eqn-maa} is rewritten as a function $k(\omega/k)$. Explicitly, we have to solve the integral function to find out $k$ for real $\omega$,
+Suppose we are looking for complex solutions for given real omega as in Fig. \ref{fig-garching}, MAA solution Eq. \eqref{eqn-maa} is rewritten as a function $k(\omega/k)$. More explicitly, we have to solve the integral function to find out $k$ for real $\omega$,
 \begin{equation}
-   k = \frac{1}{4} \int G(u) \frac{ 1 - u^2 }{ \omega/k - u }.
+   k = \frac{1}{4} \int \mathrm du G(u) \frac{ 1 - u^2 }{ \omega/k - u }.
+   \label{eqn-k-omega-relation}
 \end{equation}
-For complex $k$, the integral can be decomposed into the principal value $\operatorname{Re}(k)$ and imaginary part $\operatorname{Im}(k)$ using Sokhotski–Plemelj theorem,
+To investigate how instabilities developed around the horizental axies, we solve Eq. \eqref{eqn-k-omega-relation} in the limit $\omega\to 0$. For complex $k$, the integral can be decomposed into the principal value $\operatorname{Re}(k)$ and imaginary part $\operatorname{Im}(k)$ using Sokhotski–Plemelj theorem,
+\begin{subequations}
 \begin{align}
-\operatorname{Re}(k) =& \frac{1}{4}\left(  \mathcal{P} \int G(u) \frac{ 1 - u^2 }{  - u }  \right)\label{eqn-re-k-arbitrary-spectrum} \\
+\operatorname{Re}(k) =& \frac{1}{4}\left(  \mathcal{P} \int \mathrm d u G(u) \frac{ 1 - u^2 }{ - u }  \right)\label{eqn-re-k-arbitrary-spectrum} \\
 \operatorname{Im}(k) =&  \frac{\pi}{4}G(0) \operatorname{Sign}\left( \omega \right) \operatorname{Sign}\left(  \operatorname{Im}(k)  \right).
 \label{eqn-im-k-arbitrary-spectrum}
 \end{align}
-We conclude from Eq. \eqref{eqn-im-k-arbitrary-spectrum} that $\omega$ has to have the same sign as $G(0)$. What's more, the value of $k$ at limit $\omega\to 0$ can be solved out of Eq. \eqref{eqn-re-k-arbitrary-spectrum} and Eq. \eqref{eqn-im-k-arbitrary-spectrum}. For instabilities the imaginary part of $k$ tells us the growth,
+\end{subequations}
+Assuming no crossing is found in sepctrum $G(u)$ at $u=0$, Eq. \eqref{eqn-im-k-arbitrary-spectrum} shows that $\omega$ must have the same sign as $G(0)$ if we find nonzero imaginary part in $k$. We conclude that instabilities can only grow either in the upper plane $\omega>0$ or lower plane $\omega<0$. What's more, the value of $k$ at limit $\omega\to 0$ can be solved out of Eq. \eqref{eqn-re-k-arbitrary-spectrum} and Eq. \eqref{eqn-im-k-arbitrary-spectrum}. For instabilities the imaginary part of $k$ tells us the growth rate is,
 \begin{equation}
    \lvert \operatorname{Im}(k) \rvert  =  \frac{\pi}{4}\lvert G(0)\rvert .
 \end{equation}
@@ -307,11 +310,13 @@ Similar result is obtained for MZA solutions,
 &\left( 4 \operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right) \left( \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0) + 4 \operatorname{Im}(k) \right) \\
 =& - \left( \mathcal P \int \frac{G(u)}{u} \mathrm du + U_1 \right) \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0),
 \end{align}
-where $U_m = \int G(u) u^m \mathrm du$ and all the integrals are from $-1$ to $1$. The equations are quadratic in both $\operatorname{Re}(k)$ and $\operatorname{Im}(k)$ so the real solutions can be calculated and verified with linear stability analysis. The imaginary part $\operatorname{Im}(k)$
+where $U_m = \int G(u) u^m \mathrm du$ and all the integrals are over all the sepctrum. The equations are quadratic in both $\operatorname{Re}(k)$ and $\operatorname{Im}(k)$ so the real solutions can be calculated and verified with linear stability analysis. The imaginary part $\operatorname{Im}(k)$
 \begin{equation}
    \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega k_I) \left(  1 + \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
 \end{equation}
-determines that the two solutions are either in the region $\omega>0$ or in the region $\omega<0$ which corresponds to MZA+ and MZA- solutions.
+determines that the two different solutions are either in the region $\omega>0$ or in the region $\omega<0$ which corresponds to MZA+ and MZA- solutions. The instabilities in the two regions are not continuous at $\omega=0$.
+
+
 
 
 
@@ -319,6 +324,8 @@ determines that the two solutions are either in the region $\omega>0$ or in the 
 
 
 
+
+We have reviewed that dispersion relation gap and instabilities are the same thing for neutrino emission with two zenith angles for the quadratic nature of the problem. However, we have also shown that instabilities is not necessarily shown as gap in dispersion relations for neutrino emission with more than two zenith angles and box spectrum with crossing. As for more realistic spectrum, we have proved that instabilities propagate in regions of either $\omega>0$ or $\omega<0$ and never cross $\omega=0$. Hence the dispersion relation gaps should be defined as gaps between the dispersion relation curves and the axis $\omega=0$ instead of the dispersion relation curves. Through the discussions, we demonstrated that the relation between dispersion relation gaps and instabilities should be used with caution.
 
 
 
@@ -340,25 +347,6 @@ determines that the two solutions are either in the region $\omega>0$ or in the 
 %% APPENDIX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\appendix
-\section{\label{sec-outline}Plan of the paper}
-
-
-
-\begin{itemize}
-    \item \sout{Review fast mode oscillations}
-    \item \sout{State what has been done in Raffelt's paper.}
-    \item \sout{The conclusion is not true.}
-    \item \sout{Two zenith angles examples to prove that the number of solutions is the key.}
-    \item \sout{Three zenith angles examples to show that not exactly related to gap.}
-    \item Show that the continuous case is not related to gap at all. Box spectrum?
-    \item Continuous spectrum or Garching group, data to show that we can prove the location of the instability.
-    \item {\color{red}\bf Tweak the font size of plots.}
-\end{itemize}
-
-
-
-We are still not crystal clear about the relation between gap and lsa.
 
 
 
