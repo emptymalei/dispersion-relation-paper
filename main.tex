@@ -19,13 +19,13 @@
 %  4)  latex apssamp.tex
 %
 \documentclass[%
- % reprint,
+  reprint,
 %superscriptaddress,
 %groupedaddress,
 %unsortedaddress,
 %runinaddress,
 %frontmatterverbose,
-preprint,
+% preprint,
 %showpacs,preprintnumbers,
 %nofootinbib,
 %nobibnotes,
@@ -77,12 +77,15 @@ preprint,
 %\thanks{A footnote to the article title}%
 
 \author{Lei Ma}
- \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
+\email{leima@unm.edu}
+%  \altaffiliation[Also at ]{Physics Department, University of New Mexico.}%Lines break automatically or can be forced with \\
 \author{Huaiyu Duan}%
- \email{Second.Author@institution.edu}
+ \email{duan@unm.edu}
 \affiliation{%
- Authors' institution and/or address\\
- This line break forced with \textbackslash\textbackslash
+%  Authors' institution and/or address\\
+%  This line break forced with \textbackslash\textbackslash
+Department of Physics \& Astronomy, University of New Mexico,
+  Albuquerque, NM 87131, USA
 }%
 
 
@@ -91,7 +94,7 @@ preprint,
 
 \begin{abstract}
 
-ABSTRACT PLACEHOLDER
+Dispersion relation has been proven to be related to collective neutrino oscillations. The notion that instabilities is related to gaps in neutrino oscillations has been shown to be true in several examples. However, we find that it is not generally true for many situations. We propose that those gaps indicating instabilities should be defined as gaps between dispersion relations and the axes. Meanwhile, instabilities are not always shown as gaps in dispersion relations.
 
 
 % \begin{description}
@@ -117,12 +120,10 @@ ABSTRACT PLACEHOLDER
 
 \section{\label{sec-introduction}Introduction}
 
-(Should talk about some very very basic backgrounds like the applications and why it is important.)
+
+Neutrino flavor conversions in vacuum are described by linear Sch\"{o}dinger equation where the vacuum Hamiltonian doesn't depend on the state of neutrino flavors. It leads to periodic oscillations in different flavors. However, neutrinos propagate in dense neutrino media demonstrate highly nonlinear flavor transformations due to forward scattering interactions where the Hamiltonian is determined by the flavor contents. This nonlinear Schr\"{o}dinger equation can result in instabilities in neutrino flavor conversions. To investigate the complicated behavior of such nonlinear flavor conversions, linear stability analysis has been introduced \cite{Banerjee2011a,Raffelt2013}. Recent study by I. Izaguirre, G. Raffelt, and I. Tamborra showed that the dispersion relation gaps of the linearized equation of motion tell us the linear stability of neutrino flavor conversions \cite{Izaguirre2016a}. We will prove that neutrino flavor conversion instabilities is not exactly mapped to gaps in dispersion relation in some cases. In Sec. \ref{sec-dr}, we review linear stability analysis and dispersion relation based on references \onlinecite{Raffelt2013} and \onlinecite{Izaguirre2016a}.
 
 
-Neutrino flavor conversions in vacuum are described by linear Sch\"{o}dinger eqution where the vacuum Hamiltonian doesn't depend on the state of neutrino flavors. It leads to periodic oscillations in different flavors. However, neutrinos propagate in dense neutrino media demonstrate highly nonlinear flavor transformations due to forward scattering interactions where the Hamiltonian is determined by the flavor contents. This nonlinear Schr\"{o}dinger equation can result in instabilities in neutrino flavor conversions. To investigate the complicated behavior of such nonlinear flavor conversions, linear stability analysis has been introduced \cite{Banerjee2011a,Raffelt2013}. Recent study by I. Izaguirre, G. Raffelt, and I. Tamborra showed that the dispersion relation gaps of the linearized equation of motion tell us the linear stability of neutrino flavor conversions \cite{Izaguirre2016a}. We will prove that neutrino flavor conversion instabilities is not exactly mapped to gaps in dispersion relation in some cases. In Sec. \ref{sec-dr}, we review linear stability analysis and dispersion relation based on references \onlinecite{Raffelt2013} and \onlinecite{Izaguirre2016a}.
-
-(Introduce what are we gonna do in other sections when the paper is finished.)
 
 
 
@@ -134,9 +135,11 @@ We consider two-flavor scenario ($\nu_{\mathrm e}$ and $\nu_{\mathrm x}$) of neu
 \label{eqn-liouville-eqn}
 \end{equation}
 where $H$ is the Hamiltonian for neutrino oscillations. In the context, Hamiltonian depends on three different contributions from vacuum oscillations $H_{\mathrm v}$, interactions with matter $H_{\mathrm m}$, and interactions with neutrinos themselves $H_{\nu\nu}$. In this work, we ignore vacuum and matter terms since the concentration is on fast neutrino oscillations, which would occur even without neutrino mass differences \cite{Chakraborty2016,Dasgupta2017}. In order to calculate the neutrino self-interaction term $H_{\nu\nu}$, the distribution of neutrinos (antineutrinos) $f_{\nu_{\mathrm e}(\bar \nu_{\mathrm e})}(\hat{\mathbf v}, E)$ and $f_{\nu_{\mathrm x}(\bar \nu_{\mathrm x})}(\hat{\mathbf v}, E)$ is required, where $E$ is the energy of neutrinos (antineutrinos). We have
+\begin{widetext}
 \begin{equation}
-H_{\nu\nu} = \sqrt{2} G_{\mathrm F} \iint \frac{\mathrm d \cos\theta' \mathrm d\phi'}{4\pi} v^\mu v'_\mu \int \frac{E'^2 \mathrm d E'}{2\pi^2} \left( (f_{\nu_{\mathrm e}}' - f_{\nu_{\mathrm x}}' )\rho' -  (f_{\bar\nu_{\mathrm e}}' - f_{\bar\nu_{\mathrm x}}' ) \bar\rho' \right),
+H_{\nu\nu} = \sqrt{2} G_{\mathrm F} \iint \frac{\mathrm d \cos\theta' \mathrm d\phi'}{4\pi} v^\mu v'_\mu  \int \frac{E'^2 \mathrm d E'}{2\pi^2} \left( (f_{\nu_{\mathrm e}}' - f_{\nu_{\mathrm x}}' )\rho' -  (f_{\bar\nu_{\mathrm e}}' - f_{\bar\nu_{\mathrm x}}' ) \bar\rho' \right),
 \end{equation}
+\end{widetext}
 where $v^\mu = ( 1, \sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta )^{\mathrm T}$ is the four velocity of (anti)neutrinos in our spherical coordinate system. Without vacuum contribution, the equation of motion for antineutrinos has the same form \cite{Duan2010}.
 
 We follow the same assumption in reference \onlinecite{Izaguirre2016a} that the the distribution of $\nu_x$ and $\bar\nu_x$ are the same, namely $ f_{\nu_{\mathrm x}}(\hat{\mathbf v},E)  - f_{\bar\nu_{\mathrm x}}(\hat{\mathbf v},E)=0$. In addition, we have the same definition of electron lepton number (ELN) of neutrinos travelling in direction $\hat{\mathbf v}$ \cite{Izaguirre2016a},
@@ -281,15 +284,18 @@ Assuming no crossing is found in sepctrum $G(u)$ at $u=0$, Eq. \eqref{eqn-im-k-a
 \end{equation}
 Similar result is obtained for MZA solutions,
 \begin{align}
-&\left(4\operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2  - \left( \operatorname{Sign}(\omega \operatorname{Im}(k) )\pi G(0) +4 \operatorname{Im}(k) \right)^2 \\
+&\left(4\operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2 \nonumber \\
+&- \left( \operatorname{Sign}(\omega \operatorname{Im}(k) )\pi G(0) +4 \operatorname{Im}(k) \right)^2  \nonumber \\
 % =&\left( \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right)^2 -1 - 4 U_0^2  \\
 % &\left( 4 \operatorname{Re}(k) - \mathcal P \int \frac{G(u)}{u} \mathrm d u + U_1 \right) \left( \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0) + 4 \operatorname{Im}(k) \right) \\
 =& - \left( \mathcal P \int \frac{G(u)}{u} \mathrm du + U_1 \right) \pi \operatorname{Sign}(\omega \operatorname{Im}(k) ) G(0),
 \end{align}
 where $U_m = \int G(u) u^m \mathrm du$ and all the integrals are over all the sepctrum. The equations are quadratic in both $\operatorname{Re}(k)$ and $\operatorname{Im}(k)$ so the real solutions can be calculated and verified with linear stability analysis. The imaginary part $\operatorname{Im}(k)$
+\begin{widetext}
 \begin{equation}
    \operatorname{Im}(k) = - \frac{1}{4} \pi G(0) \operatorname{Sign}(\omega \operatorname{Im}(k) ) \left(  1 \pm \frac{ \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }{ 4 \operatorname{Re}(k) - \mathscr P \int \frac{G(u)}{u} du + \int G(u) u du }  \right)
 \end{equation}
+\end{widetext}
 determines that the two different solutions are either in the region $\omega>0$ or in the region $\omega<0$ which corresponds to MZA+ and MZA- solutions. The instabilities in the two regions are not continuous at $\omega=0$.
 
 
@@ -328,6 +334,12 @@ We have reviewed that dispersion relation gap and instabilities are the same thi
 
 
 
+
+
+
+\section{\label{acknowledgement}Acknowledgement}
+
+The first author would like to thank S. Abbar and J. Martin for their help during this research. This research is supported by DOE EPSCoR grant \#DE-SC0008142.
 
 
 
