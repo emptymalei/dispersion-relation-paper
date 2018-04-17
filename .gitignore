@@ -1,4 +1,5 @@
 .vscode/*
+program/data/.ipynb_checkpoints
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
